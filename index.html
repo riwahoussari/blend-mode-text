@@ -1,8 +1,76 @@
 <!DOCTYPE html>
 <html>
-  <head></head>
+  <head>
+    <style>
+
+      body {
+        background-color: beige;
+      }
+
+      section {
+        margin-inline-end: auto;
+        max-width: 2000px;
+      }
+
+      .flex-center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container {
+        position: relative;
+        margin-top: min(260px, 50vw);
+      }
+
+      h1 {
+        text-align: center;
+        font-size: min(17.5vw, 18vw);
+        font-weight: 600;
+        line-height: 0.8;
+
+        color: white;
+        mix-blend-mode: difference;
+      }
+
+      /* medium */
+      @media (min-width: 768px) {
+        .container {
+          margin-top: 20vw;
+        }
+
+        h1 {
+          font-size: max(110px, 12vw);
+        }
+      }
+
+      /* large */
+      @media (min-width: 1024px) {
+        .container {
+          margin-top: min(250px, 12.5vw);
+          width: min(100%, 2000px);
+        }
+        h1 {
+          font-size: min(200px, 10vw);
+        }
+      }
+    </style>
+  </head>
   <body>
-    <img src="https://images.pexels.com/photos/41953/earth-blue-planet-globe-planet-41953.jpeg" alt="" style="position: absolute; left: 0; right: 0; bottom: 0; top: 0; object-fit: cover; width: 100vw; height: 100vh;">
-    <p style="color: white; mix-blend-mode: difference; font-size: 100px; padding-top: 10vh; position: relative;">Hello world</p>
+    <section>
+      <div className="flex-center">
+        <div className="container">
+          <div>
+            <h1>
+              <span className="inline-block overflow-hidden ">
+                <span className="inline-block whitespace-pre ">
+                  Hello world
+                </span>
+              </span>
+            </h1>
+          </div>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
